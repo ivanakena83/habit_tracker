@@ -1,0 +1,333 @@
+/* ============================================
+   Smart Habit Tracker - Main Styles
+   Author: Ivan Akena
+   Module: Mobile App, Web Apps, JavaScript
+   ============================================ */
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+    padding: 20px 30px 30px 30px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.date {
+    color: #667eea;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Add Habit Section */
+.add-habit-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+#habitNameInput {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+    min-width: 200px;
+}
+
+#habitNameInput:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Habits List */
+.habits-section {
+    margin-bottom: 30px;
+}
+
+.habits-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.habits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    transition: background 0.3s;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habit-item:hover {
+    background: #e9ecef;
+}
+
+.habit-info {
+    flex: 2;
+    min-width: 150px;
+}
+
+.habit-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    word-break: break-word;
+}
+
+.habit-streak {
+    font-size: 0.85em;
+    color: #ffc107;
+    margin-top: 5px;
+}
+
+.habit-streak span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.habit-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.complete-checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #28a745;
+}
+
+.completed-text {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* Statistics Section */
+.stats-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.stats-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.stats-summary {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-card h3 {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #667eea;
+}
+
+#progressChart {
+    max-width: 100%;
+    height: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.6em;
+    }
+    
+    .add-habit-section {
+        flex-direction: column;
+    }
+    
+    .habit-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .habit-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .stats-summary {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        min-width: auto;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.3em;
+    }
+    
+    .habit-name {
+        font-size: 1em;
+    }
+}
+
+/* Scrollbar Styling */
+.habits-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.habits-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.habits-list::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}

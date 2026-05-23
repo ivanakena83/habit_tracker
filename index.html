@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Smart Habit Tracker | Ivan Akena</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📊 Smart Habit Tracker</h1>
+            <p id="dateDisplay" class="date"></p>
+            <p class="subtitle">Build positive habits, one day at a time</p>
+        </div>
+
+        <!-- Add Habit Section -->
+        <div class="add-habit-section">
+            <input type="text" id="habitNameInput" placeholder="Enter a new habit (e.g., Read 20 min)" maxlength="50">
+            <button id="addHabitBtn" class="btn btn-primary">➕ Add Habit</button>
+        </div>
+
+        <!-- Habit List Section -->
+        <div class="habits-section">
+            <h2>📋 My Habits</h2>
+            <div id="habitsList" class="habits-list">
+                <!-- Habits will be dynamically rendered here -->
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <h2>📈 Progress & Statistics</h2>
+            <div class="stats-summary">
+                <div class="stat-card">
+                    <h3>Total Habits</h3>
+                    <p id="totalHabits">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed Today</h3>
+                    <p id="completedToday">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Longest Streak</h3>
+                    <p id="longestStreak">0</p>
+                </div>
+            </div>
+            <canvas id="progressChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button id="resetAllBtn" class="btn btn-danger">🗑️ Reset All Data</button>
+            <button id="testReminderBtn" class="btn btn-secondary">🔔 Test Reminder</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
